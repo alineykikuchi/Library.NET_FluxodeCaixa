@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C0BD470-01E7-49A0-92ED-E5CB2C8477ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library_FluxoCaixa</RootNamespace>
+    <AssemblyName>Library_FluxoCaixa</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conectividade\Conexao.cs" />
+    <Compile Include="Conectividade\ConexaoEx.cs" />
+    <Compile Include="Conectividade\IConexao.cs" />
+    <Compile Include="DataAcessLayer\Pessoa\Localizacao\LogradouroDAL.cs" />
+    <Compile Include="DataValueAttribute.cs" />
+    <Compile Include="EnumExtension.cs" />
+    <Compile Include="EnumPessoaSexo.cs" />
+    <Compile Include="Modelo\Caixa.cs" />
+    <Compile Include="Modelo\Movimento\Conta.cs" />
+    <Compile Include="Modelo\Movimento\FormaMovimento.cs" />
+    <Compile Include="Modelo\Movimento\Movimento.cs" />
+    <Compile Include="Modelo\Pessoa\Heranca\Cliente.cs" />
+    <Compile Include="Modelo\Pessoa\Heranca\Cargo.cs" />
+    <Compile Include="Modelo\Pessoa\Heranca\Funcionario.cs" />
+    <Compile Include="Modelo\Pessoa\Localizacao\Bairro.cs" />
+    <Compile Include="Modelo\Pessoa\Localizacao\CEP.cs" />
+    <Compile Include="Modelo\Pessoa\Localizacao\Cidade.cs" />
+    <Compile Include="Modelo\Pessoa\Localizacao\Endereco.cs" />
+    <Compile Include="Modelo\Pessoa\Localizacao\Estado.cs" />
+    <Compile Include="Modelo\Pessoa\Localizacao\Logradouro.cs" />
+    <Compile Include="Modelo\Pessoa\Localizacao\TipoLogradouro.cs" />
+    <Compile Include="Modelo\Pessoa\Heranca\Permissao.cs" />
+    <Compile Include="Modelo\Pessoa\Pessoa.cs" />
+    <Compile Include="Modelo\Pessoa\Telefone.cs" />
+    <Compile Include="Modelo\Pessoa\TipoTelefone.cs" />
+    <Compile Include="Modelo\Venda\FormaServico.cs" />
+    <Compile Include="Modelo\Venda\Mesa.cs" />
+    <Compile Include="Modelo\Venda\Pedido.cs" />
+    <Compile Include="Modelo\Venda\Produto\CategoriaProduto.cs" />
+    <Compile Include="Modelo\Venda\Produto\ItemPedido.cs" />
+    <Compile Include="Modelo\Venda\Produto\Marca.cs" />
+    <Compile Include="Modelo\Venda\Produto\Produto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlParametros.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAcessLayer\Movimento\" />
+    <Folder Include="DataAcessLayer\Pessoa\Heranca\" />
+    <Folder Include="DataAcessLayer\Venda\Produto\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
